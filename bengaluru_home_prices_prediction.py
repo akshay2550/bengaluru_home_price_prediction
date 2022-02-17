@@ -8,6 +8,7 @@ from sklearn.linear_model import LinearRegression, Lasso
 from sklearn.tree import DecisionTreeRegressor
 from sklearn.metrics import mean_squared_error
 from joblib import dump
+from sklearn.metrics import mean_squared_error
 
 df = pd.read_csv('Bengaluru_House_Data.csv')
 
@@ -156,3 +157,5 @@ predicted_price1 = predict_price('1st Phase JP Nagar', 1000, 2, 2)
 predicted_price2 = predict_price('Whitefield', 1000, 3, 3)
 
 print(predicted_price2)
+
+dump(lr_clf, 'bengaluru_home_prices.joblib')
